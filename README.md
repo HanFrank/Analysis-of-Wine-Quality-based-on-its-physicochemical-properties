@@ -1,8 +1,8 @@
 Author: Ziyao (Frank) Han
 
-abstract: *Work in progress*
+abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper the physicochemical properties of wine will be compared with the precieved quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. *Sentence should be about results and findings which have not been completed at time of writing*."
 
-This repository contains all the resources and code for a *work in progress* paper for STA304 (Title not final). This paper will tell be telling a story using data analysis and statistical models. This repository is organised as follows:
+This repository contains all the resources and code for a *work in progress* paper. This paper will tell be telling a story using data analysis and statistical models. This repository is organised as follows:
 
 The inputs folder will contain the cleaned and raw datasets used for the analysis.
 

@@ -1,12 +1,10 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
-author: 
-  - First author
-  - Another author
-thanks: "Code and data are available at: LINK."
+title: "Regression analysis of Wine Quality based on its physicochemical properties"
+subtitle: "based on white Vinho Verde wine from Portugal"
+author: "Ziyao Han"
+thanks: "Code and data are available at: https://github.com/HanFrank/Analysis-of-Wine-Quality-based-on-its-physicochemical-properties"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper the physicochemical properties of wine will be compared with the precieved quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. *Sentence should be about results and findings which have not been completed at time of writing*."
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -17,61 +15,30 @@ bibliography: references.bib
 knitr::opts_chunk$set(echo = TRUE)
 
 library(tidyverse)
-library(palmerpenguins)
+library(dplyr)
+library(knitr)
+library(bookdown)
+library(kableExtra)
+library(ggplot2)
 ```
 
 # Introduction
 
-You can and should cross-reference sections and sub-sections. For instance, Section \@ref(data). R Markdown automatically makes the sections lower case and adds a dash to spaces to generate labels, for instance, Section \@ref(first-discussion-point). 
+Wine is one of the most widely consumed beverages in the world with significant cultural influence. Wine is made through an arduous process of selecting fruit, processing, fermentation, and ageing with many small intricacies that impact the final product. The sugar and acid levels of the fruit and ageing vessels are just some of the ways that the taste of the final product can be changed [@citeWine]. Wine has historically been consumed as a part of cultural and religious ceremonies throughout the world and is a part of the cultural identities of many countries, especially in Europe [@citeHistory].
 
+In this report, the dataset that will be used was obtained from UCI's (University of California Irvine) Machine Learning Repository and will be used for statistical modelling and visualization of the data. Some of the physicochemical variables include: Citric acid, residual sugar, chlorides, pH, and alcohol percentage. The wine's quality was graded by various wine experts on a scale of 0 (very bad) to 10 (very excellent) [@citeVinho]. Moreover, this report will use Multiple Linear Regression along with Model selection techniques in order to create an appropriate model for modelling wine quality. Furthermore, this report will interpret the results of the determined model and discuss the possible implications.
 
+The preference for the taste of wine is highly subjective just like with all other foods and drinks. There have been many studying showing that even many experts in blind taste tests cannot accurately differentiate between cheap and expensive wines [@citeTasting]. Thus, the possible implications of the study could show the objective physicochemical properties associated with wine quality. Moreover, a goal of this study is to identify dominant physicochemical variables associated with the taste of wine. The results could provide valuable insight into wine production and consumer preference. 
+
+The layout of this paper will be presented in several sections. The Data Section will discuss the source of the data and key features along with possible data limitations. The Model section will present the selected Linear Regression Model along with an explanation of the variables and properties of the model. Next, the Results section will present the results of the study with appropriate visualizations such as tables and graphs. Finally, the discussion section will be a commentary and analysis of the results along with weaknesses and potential next steps. 
 
 # Data
 
-Our data is of penguins (Figure \@ref(fig:bills)).
+The data used in this report was obtained through the UCI Machine Learning Repository [@citeUCI] and provided by [@citeVinho]. The statistical analysis in this report will be done using `R` [@citeR]. The R Packages, `tidyverse` [@citetidy] and `dplyr` [@citedplyr] will be used for data manipulation and cleaning. The graphs and tables for this report will created and formatted with `ggplot2` [@citeggplot] and `kableExtra` [@citekable]. The packages `bookdown` [@citebookdown] and `knitr` [@citeknitr] will be used to format this report.
 
-```{r bills, fig.cap="Bills of penguins", echo = FALSE}
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk more about it.
-
-Also bills and their average (Figure \@ref(fig:billssssss)). (Notice how you can change the height and width so they don't take the whole page?)
-
-```{r billssssss, fig.cap="More bills of penguins", echo = FALSE, fig.width=8, fig.height=4}
-
-# This needs to be about the random data tha tI sasmpled?
-ggplot(penguins, aes(x = island, fill = species)) +
-  geom_bar(alpha = 0.8) +
-  scale_fill_manual(values = c("darkorange","purple","cyan4"),
-                    guide = FALSE) +
-  theme_minimal() +
-  facet_wrap(~species, ncol = 1) +
-  coord_flip()
-```
-
-Talk way more about it. 
-
-
+## Data Limitations
 
 # Model
-
-\begin{equation}
-Pr(\theta | y) = \frac{Pr(y | \theta) Pr(\theta)}{Pr(y)}  (\#eq:bayes)
-\end{equation}
-
-Equation \@ref(eq:bayes) seems useful, eh?
-
-Here's a dumb example of how to use some references: In paper we run our analysis in `R` [@citeR]. We also use the `tidyverse` which was written by @thereferencecanbewhatever If we were interested in baseball data then @citeLahman could be useful. 
-
-We can use maths by including latex between dollar signs, for instance $\theta$.
-
 
 # Results
 
@@ -79,15 +46,13 @@ We can use maths by including latex between dollar signs, for instance $\theta$.
 
 ## First discussion point
 
-If my paper were 10 pages, then should be be at least 2.5 pages. The discussion is a chance to show off what you know and what you learnt from all this. 
-
 ## Second discussion point
 
 ## Third discussion point
 
 ## Weaknesses and next steps
 
-Weaknesses and next steps should also be included.
+# Conclusion
 
 \newpage
 

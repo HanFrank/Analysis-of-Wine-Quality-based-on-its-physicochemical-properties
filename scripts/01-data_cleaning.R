@@ -1,36 +1,18 @@
-#### Preamble ####
+## Data cleaning ##
 # Purpose: Clean the survey data downloaded from [...UPDATE ME!!!!!]
-# Author: Rohan Alexander [CHANGE THIS TO YOUR NAME!!!!]
+# Author: Ziyao Han
 # Data: 3 January 2021
-# Contact: rohan.alexander@utoronto.ca [PROBABLY CHANGE THIS ALSO!!!!]
+# Contact: frank.han@mail.utoronto.ca
 # License: MIT
-# Pre-requisites: 
-# - Need to have downloaded the ACS data and saved it to inputs/data
-# - Don't forget to gitignore it!
-# - Change these to yours
-# Any other information needed?
 
 
 #### Workspace setup ####
-# Use R Projects, not setwd().
-library(haven)
+library(readr)
 library(tidyverse)
-# Read in the raw data. 
-raw_data <- readr::read_csv("inputs/data/raw_data.csv"
-                     )
-# Just keep some variables that may be of interest (change 
-# this depending on your interests)
-names(raw_data)
+# Read in the raw data.
 
-reduced_data <- 
-  raw_data %>% 
-  select(first_col, 
-         second_col)
-rm(raw_data)
-         
+# Seperator is a semicolon
+rawdata<-read.table("inputs/data/winequality-white.csv", sep=";", header=T)
 
-#### What's next? ####
-
-
-
+write.csv(rawdata, "inputs/data/cleaned_white_wine.csv")
          

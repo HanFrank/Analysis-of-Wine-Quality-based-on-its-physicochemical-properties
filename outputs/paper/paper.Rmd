@@ -4,7 +4,7 @@ subtitle: "based on white Vinho Verde wine from Portugal"
 author: "Ziyao Han"
 thanks: "Code and data are available at: https://github.com/HanFrank/Analysis-of-Wine-Quality-based-on-its-physicochemical-properties"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper the physicochemical properties of wine will be compared with the precieved quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. *Sentence should be about results and findings which have not been completed at time of writing*."
+abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper the physicochemical properties of wine will be compared with the precieved quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. *Sentence should be about results and findings which have not been completed at time of writing*. \\par \\textbf {Keywords:} Multiple Linear Regression, Model Selection, Wine Quality, White Wine, Vinho Verde, Physicochemical Properties"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -37,6 +37,16 @@ The layout of this paper will be presented in several sections. The Data Section
 The data used in this report was obtained through the UCI Machine Learning Repository [@citeUCI] and provided by [@citeVinho]. The statistical analysis in this report will be done using `R` [@citeR]. The R Packages, `tidyverse` [@citetidy] and `dplyr` [@citedplyr] will be used for data manipulation and cleaning. The graphs and tables for this report will created and formatted with `ggplot2` [@citeggplot] and `kableExtra` [@citekable]. The packages `bookdown` [@citebookdown] and `knitr` [@citeknitr] will be used to format this report.
 
 ## Data Limitations
+*Notes, not final*
+
+1. Only white wine
+
+2. Taste is subjective
+
+3. Only 1 type of wine from 1 country
+
+4. Many variables will be correlated
+
 
 # Model
 

@@ -15,4 +15,3 @@ library(tidyverse)
 rawdata<-read.table("inputs/data/winequality-white.csv", sep=";", header=T)
 
 write.csv(rawdata, "inputs/data/cleaned_white_wine.csv")
-         

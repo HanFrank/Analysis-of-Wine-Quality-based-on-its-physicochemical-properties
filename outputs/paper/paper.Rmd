@@ -71,6 +71,7 @@ For our analysis, we will be using contextual reasoning combined with Model Diag
 Variables such as volatile acidity, fixed acidity, citric acid, pH all tell a similar story so pH will be used instead of all of these variables. This is also true for free sulphur dioxide, total sulphur dioxide and sulphates. Thus, the sulphates will be used to account for this factor.
 
 ## Data Limitations
+*Notes need to expand*
 
 1. Only white wine
 

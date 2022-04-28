@@ -66,9 +66,11 @@ summary(white_wine$quality)
 
 ## Model selection:
 
-For our analysis, we will be using contextual reasoning combined with Model Diagnostics and the significance of the parameter estimates. Additionally, the Akaike information criterion (AIC) and Bayesian Information Criterion (BIC) will be used to measure how well variables fit the model. We will not be using an automated variable selection procedure because it ignores the contextual reasoning behind the variable selection and may cause bias [@citeBias]. In general, we would be looking for a smaller model so as to not overfit the model and a smaller model allows for better context analysis.
+For our analysis, we will be using contextual reasoning combined with Model Diagnostics and the significance of the parameter estimates. Additionally, the Akaike information criterion (AIC) and Bayesian Information Criterion (BIC) will be used to measure how well variables fit the model. We will not be using an automated variable selection procedure because it ignores the contextual reasoning behind the variable selection and may cause bias [@citeBias]. In general, we would be looking for a smaller model so as to not overfit the model and a smaller model allows for a more interpretable model.
 
-Variables such as volatile acidity, fixed acidity, citric acid, pH all tell a similar story so pH will be used instead of all of these variables. This is also true for free sulphur dioxide, total sulphur dioxide and sulphates. Thus, the sulphates will be used to account for this factor.
+Variables such as volatile acidity, fixed acidity, citric acid, pH all tell a similar story so pH will be used instead of all of these variables. This is also true for free sulphur dioxide, total sulphur dioxide and sulphates. Thus, the sulphates will be used to account for this factor. Density was not used because there is not a good contextual reason to why density would cause a difference in wine quality. Additionally, in the exploratory data analysis we found that the density variable has very small variability between its values, thus would probably not be very explanatory for analysis. 
+
+*Need another few paragraphs justifying variables + AIC/BIC + model diagnostics*
 
 ## Data Limitations
 *Notes need to expand*

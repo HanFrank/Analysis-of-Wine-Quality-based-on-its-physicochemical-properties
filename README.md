@@ -1,6 +1,6 @@
 Author: Ziyao (Frank) Han
 
-abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper the physicochemical properties of wine will be compared with the precieved quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. *Sentence should be about results and findings which have not been completed at time of writing*."
+abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper, the physicochemical properties of wine will be compared with the perceived quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. We found that higher alcohol percentage, higher sulphate, and less acidic wines yield higher quality scores, while sugar percentage does not appear to affect scores significantly."
 
 This repository contains all the resources and code for a *work in progress* paper. This paper will tell be telling a story using data analysis and statistical models. This repository is organised as follows:
 

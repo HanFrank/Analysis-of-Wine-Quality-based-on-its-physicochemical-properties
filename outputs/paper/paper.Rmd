@@ -4,7 +4,7 @@ subtitle: "based on white Vinho Verde wine from Portugal"
 author: "Ziyao Han"
 thanks: "Code and data are available at: https://github.com/HanFrank/Analysis-of-Wine-Quality-based-on-its-physicochemical-properties"
 date: "`r format(Sys.time(), '%d %B %Y')`"
-abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper, the physicochemical properties of wine will be compared with the perceived quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. We found that Alcohol percentage, Sulphate, and less acidic wines yield higher quality scores, while sugar percentage does not appear to affect scores significantly. \\par \\textbf {Keywords:} Multiple Linear Regression, Model Selection, Wine Quality, White Wine, Vinho Verde, Physicochemical Properties"
+abstract: "Wine is one of the most widely consumed beverages in the world with significant cultural influence. In this paper, the physicochemical properties of wine will be compared with the perceived quality of wine by wine experts. Even though the preference for wine taste is highly subjective, this study may help identify objective components for wine preference. We found that higher alcohol percentage, higher sulphate, and less acidic wines yield higher quality scores, while sugar percentage does not appear to affect scores significantly. \\par \\textbf {Keywords:} Multiple Linear Regression, Model Selection, Wine Quality, White Wine, Vinho Verde, Physicochemical Properties"
 output:
   bookdown::pdf_document2
 toc: FALSE
@@ -48,7 +48,7 @@ Table 1 is a summary of the variables in our dataset.
 
 ```{r, echo = FALSE, warning = FALSE, results = FALSE}
 # Making a table with a summary of each variable
-# Getting data summaries
+# Getting data summaries (Not the table, would need to insert into kable and make look nice)
 summary(white_wine$fixed.acidity)
 summary(white_wine$volatile.acidity)
 summary(white_wine$citric.acid)
@@ -105,6 +105,17 @@ summary(model)
 
 # Results {#results}
 
+```{r graph1, echo = FALSE, message = FALSE, fig.cap="Alcohol vs Quality scores"}
+white_wine %>% 
+  ggplot(aes(x = alcohol, y = quality)) +
+  geom_point() +
+  geom_smooth(method="lm") +
+  labs(title =  "Alcohol has a positive linear relationship with quality") +
+  theme_minimal() 
+```
+
+Figure \@ref(fig:graph1) shows a positive correlation between higher alcohol percentage in the wine and higher scores given by experts.
+
 # Discussion {#discussion}
 
 ## First discussion point
@@ -126,9 +137,6 @@ r <- resid(model)
 # residual plots
 pairs(white_wine[,9:11], main="Residual plots for variables in model")
 ```
-
-
-# Additional details
 
 
 \newpage
